@@ -19,7 +19,7 @@ public class Student implements Serializable {
 	public Date birthDate;
 	public Date registrationDate;
 	public int moyenne;
-	public List<Matiere>matiere;
+	public List<Matiere>matieres;
 	public Long getId() {
 		return id;
 	}
@@ -42,7 +42,7 @@ public class Student implements Serializable {
 		return moyenne;
 	}
 	public List<Matiere> getMatiere() {
-		return matiere;
+		return matieres;
 	}
 	public void setId(Long id) {
 		this.id = id;
@@ -66,7 +66,7 @@ public class Student implements Serializable {
 		this.moyenne = moyenne;
 	}
 	public void setMatiere(List<Matiere> matiere) {
-		this.matiere = matiere;
+		this.matieres = matiere;
 	}
 	
 
@@ -89,7 +89,7 @@ public class Student implements Serializable {
 		result = prime * result + age;
 		result = prime * result + ((filiere == null) ? 0 : filiere.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((matiere == null) ? 0 : matiere.hashCode());
+		result = prime * result + ((matieres == null) ? 0 : matieres.hashCode());
 		result = prime * result + moyenne;
 		result = prime * result + ((niveau == null) ? 0 : niveau.hashCode());
 		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
@@ -117,10 +117,10 @@ public class Student implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (matiere == null) {
-			if (other.matiere != null)
+		if (matieres == null) {
+			if (other.matieres != null)
 				return false;
-		} else if (!matiere.equals(other.matiere))
+		} else if (!matieres.equals(other.matieres))
 			return false;
 		if (moyenne != other.moyenne)
 			return false;
