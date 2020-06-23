@@ -15,6 +15,17 @@ public class Matiere implements Serializable {
 	public String nom;
 	public List<Student>student;
 	
+	
+	
+	public Matiere(int id, String nom) {
+		super();
+		this.id = id;
+		this.nom = nom;
+	}
+	
+	public Matiere() {
+	}
+
 	public int getId() {
 		return id;
 	}
